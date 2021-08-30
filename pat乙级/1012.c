@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+
 int calculate(int type,int n,int number[1000]);
 float calculate_A4(int n,int number[1000]);
 
