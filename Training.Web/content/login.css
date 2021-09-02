@@ -1,0 +1,64 @@
+.login {
+    background: url(../images/login_background.jpg) no-repeat;
+    background-size: cover;
+}
+.login_box{
+	max-width: 340px;
+	margin: 0 auto 0;
+	padding: 8% 0 0 0;
+    position: relative;
+    right: 0;
+}
+.login_logo{
+    text-align: center;
+	padding-bottom: 20px;
+}
+.login_logo img {
+    width: 76%;
+}
+.login_from{
+	background: #f7f7f7;
+	border-radius: 4px;
+	margin: 2% 0;
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+	padding: 5% 8% 6%;
+}
+.login_from h4{
+	padding: 10px 0 12px;
+	font-weight: bold;
+}
+.login_from .input-group{
+	margin-bottom: 14px;
+}
+.login_from .input-group-addon {
+	padding: 11px 12px;
+}
+.login_from .form-control{
+	height: 40px;
+	line-height: 40px;
+	padding: 0 12px;
+}
+.input-group a{
+	font-size: 12px;
+	color: #777;
+}
+.input-group a:hover,.input-group a:focus,.input-group a:active{
+	color:#2892d4;
+}
+.login_button {
+    width: 100%;
+}
+.login_from button{
+	height: 38px;
+	line-height: 38px;
+	font-size: 16px;
+	font-weight: 400;
+	border-radius: 2px;
+}
+.login_from i{
+	color: #d4d4d4;
+}
+.login_bottom{
+	padding: 4% 0 1% 0;
+	font-size:13px;
+}

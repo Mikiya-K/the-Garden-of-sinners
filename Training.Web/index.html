@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Training</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="Cache-control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <link href="dist/training.css?version=20210902091716" rel="stylesheet">
+    <script src="scripts/jquery-1.10.2.min.js"></script>
+    <script src="scripts/vendors/respond.js"></script>
+    <script src="scripts/vendors/respond.matchmedia.addListener.js"></script>
+    <script src="scripts/vendors/html5shiv.js"></script>
+    <script src="libs/angular/angular.js"></script>
+    <script src="scripts/vendors/angular-cookie.js"></script>
+    <script src="libs/angular/angular-route.js"></script>
+    <script src="libs/angular/angular-loader.js"></script>
+    <script src="libs/ng-file-upload/angular-file-upload.min.js"></script>
+    <script src="libs/ng-file-upload/angular-file-upload-shim.min.js"></script>
+    <script src="libs/drag-drop/angular-drag-and-drop-lists.min.js"></script>
+    <script src="scripts/vendors/footable.js"></script>
+    <script src="libs/bootstrap/bootstrap.min.js"></script>
+    <script src="scripts/common/ui-bootstrap.js"></script>
+    <script src="libs/bootstrap-datepicker/bootstrap-datepicker.js"></script>
+    <script src="libs/moment/moment.js"></script>
+    <script src="libs/bootstrap-datetimepicker/bootstrap-datetimepicker.js"></script>
+    <script src="scripts/vendors/angular-spinner.js"></script>
+    <script src="scripts/vendors/spin.js"></script>
+    <script src="scripts/common/csv.min.js"></script>
+    <script src="scripts/vendors/linqjs/linq.min.js"></script>
+    <script src="scripts/vendors/select2/select2.js"></script>
+    <script src="dist/common.min.js?version=20210902091716"></script>
+    <script src="scripts/common/apiTools.js?version=20210902091716"></script>
+    <script src="dist/training.js?version=20210902091716"></script>
+    <script src="scripts/zTree/jquery.ztree.core.min.js"></script>
+    <script src="scripts/zTree/jquery.ztree.exedit.js"></script>
+    <script src="scripts/zTree/jquery.ztree.excheck.min.js"></script>
+</head>
+<body ng-app="app" ng-class="{'login':isLogin}">
+    <div id="app" class="app app-header-fixed">
+        <!--alert:页面消息弹出区域-->
+        <div ng-controller="alertController">
+            <alert class="global-message" ng-repeat="alert in alerts track by $id($index)" type="{{alert.type}}" close="closeAlert($index)">
+                <span style="text-align: center" ng-bind="alert.msg"></span>
+            </alert>
+        </div>
+        <!--header:控制显示主页面菜单区域-->
+        <div ng-if="!isLogin">
+            <div ng-include="'header.html?version=20210902091716'"></div>
+        </div>
+        <!--ng-view:配合route实现单页面程序-->
+        <div id="main" ng-class="{'app-content':!isLogin}">
+            <div ng-view></div>
+        </div>
+        <div class="app-footer wrapper b-t bg-light" ng-if="!isLogin">@2021&nbsp;&nbsp;&nbsp;版权所有：XXXX有限公司&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;技术支持：XXXX有限公司</div>
+    </div>
+</body>
+</html>
