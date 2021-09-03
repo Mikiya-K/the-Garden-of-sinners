@@ -36,5 +36,8 @@ function setRoute($routeProvider, versionToolsProvider) {
     }).when("/user", {
         templateUrl: "../views/user.html?version=" + versionToolsProvider.lastBuildTimeStamp,
         controller: "userController"
+    }).when("/marketing",{
+        templateUrl: "../views/marketing.html?version=" + versionToolsProvider.lastBuildTimeStamp,
+        controller: "marketingController"
     });
 }

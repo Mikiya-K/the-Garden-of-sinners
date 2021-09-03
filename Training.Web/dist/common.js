@@ -1,7 +1,7 @@
 "use strict";
 var app = angular.module("app", ["ngRoute", "ui.bootstrap", "ipCookie"]);
 app.provider("versionTools", function () {
-    this.lastBuildTimeStamp="20210902091716";
+    this.lastBuildTimeStamp="20210903084630";
     this.$get = function () {
 	    var lastBuildTimeStamp = this.lastBuildTimeStamp;
         return {
@@ -49,6 +49,9 @@ function setRoute($routeProvider, versionToolsProvider) {
     }).when("/user", {
         templateUrl: "../views/user.html?version=" + versionToolsProvider.lastBuildTimeStamp,
         controller: "userController"
+    }).when("/marketing",{
+        templateUrl: "../views/marketing.html?version=" + versionToolsProvider.lastBuildTimeStamp,
+        controller: "marketingController"
     });
 }
 app.factory("httpProxy", ["$http", "$q", "apiTools", "tools", function ($http, $q, apiTools, tools) {
