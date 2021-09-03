@@ -12,8 +12,8 @@
                         </div>
                         <div class="col-md-3 input-spacing">
                             <div class="input-group">
-                                <span class="input-group-addon">类型</span>
-                                <input type="text" class="form-control" autocomplete="off" ng-model="searchInfo.type" placeholder="类型">
+                                <span class="input-group-addon">客户类型</span>
+                                <input type="text" class="form-control" autocomplete="off" ng-model="searchInfo.type" placeholder="客户类型">
                             </div>
                         </div>
                         <div class="col-md-3 input-spacing">
@@ -55,7 +55,7 @@
                             <thead>
                                 <tr>
                                     <th>客户名</th>
-                                    <th>类型</th>
+                                    <th>客户类型</th>
                                     <th>状态</th>
                                     <th>email</th>
                                     <th>联系电话</th>
@@ -122,12 +122,12 @@
                         <div class="col-md-9">
                             <div class="form-group">
                                 <div class="col-md-5 text-right padding-right">
-                                    <label class="control-label"><span class="required">*</span>类型</label>
+                                    <label class="control-label"><span class="required">*</span>客户类型</label>
                                 </div>
                                 <div class="col-md-7">
-                                    <input type="text" class="form-control" autocomplete="off" placeholder="请输入类型" ng-model="devcustomer.type" name="type" required ng-maxlength="50">
+                                    <input type="text" class="form-control" autocomplete="off" placeholder="请输入客户类型" ng-model="devcustomer.type" name="type" required ng-maxlength="50">
                                     <span class="required" ng-show="form.loginName.$dirty && form.loginName.$invalid">
-                                        <span ng-show="form.loginName.$error.required">请输入类型</span>
+                                        <span ng-show="form.loginName.$error.required">请输入客户类型</span>
                                         <span ng-show="form.loginName.$error.maxlength">长度不能超过20个字符</span>
                                     </span>
                                 </div>
