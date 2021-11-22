@@ -17,6 +17,7 @@ func main() {
 			f, err := os.Open(v)
 			if err == nil {
 				countLines(f, counts)
+				f.Close()
 			}
 		}
 	}
