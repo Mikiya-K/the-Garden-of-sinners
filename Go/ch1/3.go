@@ -19,7 +19,6 @@ func main() {
 				countLines(f, counts)
 			}
 		}
-
 	}
 
 	for k, v := range counts {
