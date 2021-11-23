@@ -1,10 +1,11 @@
+package leetcode
+
+import "math"
+
 func thirdMax(nums []int) int {
-	distinct := make(map[int]int)
 	max, medium, min := math.MinInt64, math.MinInt64, math.MinInt64
 
 	for _, v := range nums {
-		distinct[v]++
-
 		switch {
 		case v > max:
 			{
@@ -24,7 +25,7 @@ func thirdMax(nums []int) int {
 		}
 	}
 
-	if len(distinct) < 3 {
+	if min == math.MinInt64 {
 		return max
 	} else {
 		return min

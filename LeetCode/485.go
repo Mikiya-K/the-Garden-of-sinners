@@ -1,3 +1,5 @@
+package leetcode
+
 func findMaxConsecutiveOnes(nums []int) int {
 	currentConsecutiveOnes, maxConsecutiveOnes := 0, 0
 
