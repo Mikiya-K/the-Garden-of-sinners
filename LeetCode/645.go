@@ -1,19 +1,23 @@
 package leetcode
 
 func findErrorNums(nums []int) []int {
-	record := make([]int, len(nums))
-	result := make([]int, 2)
+	n := len(nums)
 
 	for _, v := range nums {
-		record[v-1]++
+		if v%n == 0 {
+			nums[n-1] += n
+		} else {
+			nums[v%n-1] += n
+		}
 	}
 
-	for k, v := range record {
-		switch v {
-		case 2:
-			result[0] = k + 1
-		case 0:
+	result := make([]int, 2)
+	for k, v := range nums {
+		switch {
+		case v <= n:
 			result[1] = k + 1
+		case v >= 2*n+1:
+			result[0] = k + 1
 		}
 	}
 
